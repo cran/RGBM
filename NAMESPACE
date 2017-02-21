@@ -1,0 +1,12 @@
+import(foreach, plyr, doParallel)
+importFrom("stats","rnorm","sd","var","qnorm","lm","fitted")
+importFrom("grDevices", "dev.off", "pdf")
+importFrom("graphics", "par", "plot")
+importFrom("utils", "read.table", "write.table")
+#
+# Exports everything from "extern C {}" brackets
+#
+exportPattern("^[^\\.]")
+
+useDynLib(RGBM,.registration = TRUE)
+#library.dynam("C_RGBM","RGBM",lib.loc = paste0(path.package("RGBM"),"/src"))
