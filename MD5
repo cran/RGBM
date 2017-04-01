@@ -1,4 +1,4 @@
-a302105afacdec6f7dd77303adcea38c *DESCRIPTION
+59dfcfd542b06a2fa437e0bd0b58d2bd *DESCRIPTION
 3ea8964dd3d80681d5c46d30f46dcb71 *NAMESPACE
 233f76ea882528c6cb2891a0ac721f99 *R/GBM.R
 3e0b1f671174b0f89196d4823fb55291 *R/GBM.test.R
@@ -35,12 +35,12 @@ f37253d913461c94cc1b0e9c2006d1e7 *man/normalize_matrix_colwise.Rd
 1f045f7fe0102e035b68f2b5e921b972 *man/z_score_effect.Rd
 f8578d694b247191dea4b761dbe8d726 *src/Model.h
 67e9c9edc9444f9379a7e7527a6d83b4 *src/Prediction.h
-c5501f0db5cb9230e59a3965c6e61ec8 *src/R_init_RGBM.c
+816a3253639f49c879b218a8fea94ac5 *src/R_init_RGBM.c
 be41e1925cb325134cd3eba9146c5e88 *src/pcg_basic.c
 1c5d0bb60da87eae144c92908cfcbf43 *src/pcg_basic.h
 d91f2330e26658fe30e67f60224c57e6 *src/regression_stump.h
 a08dc7c53b556feca16fe58711654d11 *src/solver_test.cpp
 3584090f43282dab73019078bff9fbac *src/test_regression_stump.cpp
 6f6a9de713b8d64826d897c35cfab2d6 *src/test_regression_stump_R.cpp
-8ed4410ba539a6bcc2e2072753165b48 *src/train_regression_stump.cpp
+daa442409e9ab99fb1478c023cfa9d52 *src/train_regression_stump.cpp
 93aeef0c0baaf8509848a7780b5c38d1 *src/train_regression_stump_R.cpp

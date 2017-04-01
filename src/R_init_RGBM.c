@@ -14,10 +14,24 @@ void test_regression_stump_R(const int *N_test, const int *P_test,
 		const double *f0, const int *featI, const double * featT,
 		const double *gamma_l, const double *gamma_r, double *loss, double *p);
 
-static const R_CMethodDef cMethods[] = {
-{"train_regression_stump_R", (DL_FUNC) &train_regression_stump_R, 15},
-{"test_regression_stump_R", (DL_FUNC) &test_regression_stump_R, 15}, 
-NULL
+static R_NativePrimitiveArgType train_regression_stump_R_t[] = {
+  INTSXP, INTSXP, REALSXP, REALSXP, REALSXP, 
+  REALSXP, INTSXP, INTSXP, REALSXP, REALSXP,
+  REALSXP, INTSXP, REALSXP, REALSXP, REALSXP
+};
+
+static R_NativePrimitiveArgType test_regression_stump_R_t[] = {
+  INTSXP, INTSXP, INTSXP, REALSXP, REALSXP,
+  INTSXP, INTSXP, REALSXP, REALSXP, INTSXP,
+  REALSXP, REALSXP, REALSXP, REALSXP, REALSXP
+};
+
+static R_CMethodDef cMethods[] = {
+
+  {"train_regression_stump_R", (DL_FUNC) &train_regression_stump_R, 15, train_regression_stump_R_t},
+  {"test_regression_stump_R", (DL_FUNC) &test_regression_stump_R, 15, test_regression_stump_R_t}, 
+  {NULL,NULL,0}
+  
 };
 
 void R_init_RGBM(DllInfo *info)
@@ -28,7 +42,3 @@ void R_init_RGBM(DllInfo *info)
   R_useDynamicSymbols(info,FALSE);
 }
 
-void R_unload_RGBM(DllInfo *info)
-{
-  /* Release resources. */
-}
