@@ -268,7 +268,7 @@ const Model train_regression_stump(const int N, const int P, const double *x,
 	    P_unique_inbag = ceil(col_sampling_rate * P);
 	    P_already_bagged = 0;
 	    for (s = 0; s < P; s++) {
-	      if (((float)ldexp(pcg32_random(), -32)) * (P - s)
+	      if (((float)ldexp((double)pcg32_random(), -32)) * (P - s)
               < P_unique_inbag - P_already_bagged) {
         //   if ((1.0 * rand() / RAND_MAX) * (P - s)
         //     < P_unique_inbag - P_already_bagged) {
