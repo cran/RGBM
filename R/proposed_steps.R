@@ -177,17 +177,17 @@ select_ideal_k <- function(experimentid=1,mink=0,filepath,imagepath,adjacency_ma
     sorted_tf_impv <- importance_matrix[track_matrix[,target_id],target_id];
     xcord <- c(1:TF);
     ref_v_y <- sorted_tf_impv[length(sorted_tf_impv)]
-    ref_v_x <- TF;
+    ref_v_x <- TF/TF;
     final_vector <- NULL;
     for (j in 1:(TF-2))
     {
       ref_j_y <- sorted_tf_impv[j];
-      ref_j_x <- j;
+      ref_j_x <- j/TF;
       temp <- c();
       for (k in ((j+1):(TF-1)))
       {
         ref_k_y <- sorted_tf_impv[k];
-        ref_k_x <- k;
+        ref_k_x <- k/TF;
         a = c(ref_k_x - ref_j_x, ref_k_y - ref_j_y)
         b = c(ref_k_x - ref_v_x, ref_k_y - ref_v_y)
         norm_a <- sqrt(sum(a^2))
