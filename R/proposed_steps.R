@@ -179,7 +179,12 @@ select_ideal_k <- function(experimentid=1,mink=0,filepath,imagepath,adjacency_ma
     ref_v_y <- sorted_tf_impv[length(sorted_tf_impv)]
     ref_v_x <- TF/TF;
     final_vector <- NULL;
-    for (j in 1:(TF-2))
+    if (mink==0){
+      min_id = 1;
+    }else{
+      min_id=mink;
+    }
+    for (j in min_id:(TF-2))
     {
       ref_j_y <- sorted_tf_impv[j];
       ref_j_x <- j/TF;
@@ -206,9 +211,9 @@ select_ideal_k <- function(experimentid=1,mink=0,filepath,imagepath,adjacency_ma
       }
       select_value <- min(temp);
       select_k<-which.min(temp);
-      if (select_k + j > mink + 1)
+      if ((select_k + j) > (mink + 1))
       {
-        final_vector <- rbind(final_vector,cbind(j,select_k+j,select_value))
+        final_vector <- rbind(final_vector,cbind(j,(select_k+j),select_value))
       }
       if ((select_k+j)>(mink+1) && select_k==1 && temp==0) {
         break;
