@@ -49,10 +49,10 @@ inline double calculate_median(double *y_temp, int start, int end)
 {
   double med_y = 0.0;
   int mid,left,right;
-  int index=0,N,N_t;
+  int index=0,N_t;
   
   // No of elements in y_temp
-  N = sizeof(y_temp)/sizeof(double);
+  //N = sizeof(y_temp)/sizeof(double);
   
   // No of elements to calculate median over
   N_t = end-start;

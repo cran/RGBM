@@ -1,4 +1,4 @@
-0e38cbaa4a00b62ea5b34b64ee20baff *DESCRIPTION
+ac18e772aeba619feec6931cb70729b4 *DESCRIPTION
 43c6737dbf86ce00d8d71edb4821a5bb *NAMESPACE
 233f76ea882528c6cb2891a0ac721f99 *R/GBM.R
 3e0b1f671174b0f89196d4823fb55291 *R/GBM.test.R
@@ -42,5 +42,5 @@ d91f2330e26658fe30e67f60224c57e6 *src/regression_stump.h
 a08dc7c53b556feca16fe58711654d11 *src/solver_test.cpp
 3584090f43282dab73019078bff9fbac *src/test_regression_stump.cpp
 6f6a9de713b8d64826d897c35cfab2d6 *src/test_regression_stump_R.cpp
-666d85e92ea26937a89f963468ebc2a1 *src/train_regression_stump.cpp
+e3776b98991d41554f1b50d8ea35ac27 *src/train_regression_stump.cpp
 93aeef0c0baaf8509848a7780b5c38d1 *src/train_regression_stump_R.cpp

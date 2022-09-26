@@ -2,8 +2,8 @@ Package: RGBM
 Type: Package
 Title: LS-TreeBoost and LAD-TreeBoost for Gene Regulatory Network
         Reconstruction
-Version: 1.0-9
-Date: 2022-07-09
+Version: 1.0-10
+Date: 2022-09-25
 Author: Raghvendra Mall [aut, cre],
   Khalid Kunji [aut],
   Melissa O'Neill [ctb]
@@ -17,5 +17,5 @@ License: GPL (>= 3)
 LazyLoad: yes
 Depends: foreach, plyr, doParallel
 NeedsCompilation: yes
-Packaged: 2022-07-22 15:38:05 UTC; administrator
-Date/Publication: 2022-08-11 10:40:18 UTC
+Packaged: 2022-09-25 11:49:58 UTC; rmall
+Date/Publication: 2022-09-26 07:10:10 UTC
