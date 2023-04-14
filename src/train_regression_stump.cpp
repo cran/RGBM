@@ -88,6 +88,7 @@ inline int compare(const void *a, const void *b) {
 	return 0;
 }
 
+static pcg32_random_t pcg32_global = PCG32_INITIALIZER;
 
 const Model train_regression_stump(const int N, const int P, const double *x,
 		const double *y, const double col_sampling_rate,
@@ -109,7 +110,7 @@ const Model train_regression_stump(const int N, const int P, const double *x,
 	// *never* have random sequences that coincide, at all) - the code below
 	// shows three possible ways to do so.
 	bool seed_given = false;
-  uint64_t seed;
+  uint64_t seed = 123;
   if (seed_given) {
     pcg32_srandom(42u, seed);
   } else {
@@ -268,7 +269,7 @@ const Model train_regression_stump(const int N, const int P, const double *x,
 	    P_unique_inbag = ceil(col_sampling_rate * P);
 	    P_already_bagged = 0;
 	    for (s = 0; s < P; s++) {
-	      if (((float)ldexp((double)pcg32_random(), -32)) * (P - s)
+	      if (((float)ldexp((double)pcg32_random_r(&pcg32_global), -32)) * (P - s)
               < P_unique_inbag - P_already_bagged) {
         //   if ((1.0 * rand() / RAND_MAX) * (P - s)
         //     < P_unique_inbag - P_already_bagged) {

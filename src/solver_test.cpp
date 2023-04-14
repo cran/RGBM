@@ -42,7 +42,7 @@ int main() {
   // *never* have random sequences that coincide, at all) - the code below
   // shows three possible ways to do so.
   bool seed_given = false;
-  uint64_t seed;
+  uint64_t seed = 123;
   if (seed_given) {
     pcg32_srandom(42u, seed);
   } else {
